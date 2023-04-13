@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+:root {
+  --toastify-color-success: hsl(var(--accent));
+}
+body {
+  background-image: url('../public/background-image.jpeg');
+}
+.signup {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .signup label {
+    text-align: left;
+    display: block;
+    color: white;
+  }
+  .signup h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+  }
+  .signup input, .signup textarea, .signup select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .signup button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+  }
