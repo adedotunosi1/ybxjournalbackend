@@ -101,7 +101,9 @@ app.post("/forgot-password", async (req, res) => {
    const {email} = req.body;
    try {
     const oldUser = await MyUsers.findOne({ email });
-    
+    let emails = oldUser.email;
+    emails = emails.replace(/'/g, '');
+    console.log(emails);
     if(!oldUser){
     return res.json({ status: "User does not exist!!"});
     }
@@ -123,7 +125,7 @@ app.post("/forgot-password", async (req, res) => {
     
     const mailOptions = {
       from: 'ybxjournal@gmail.com',
-      to: oldUser,
+      to: emails,
       subject: 'YBXJournal Password Reset',
       text: message,
     };
