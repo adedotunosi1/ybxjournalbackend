@@ -111,7 +111,7 @@ app.post("/forgot-password", async (req, res) => {
     const token = jwt.sign({ email: oldUser.email, id: oldUser.id },secret,{
       expiresIn: "5m",
     });
-    const link = `http://localhost:4000/reset-password/${oldUser._id}/${token}`;
+    const link = `https://ybxjournall.onrender.com/${oldUser._id}/${token}`;
     console.log(link);
     const message = `Reset your Passoword using the following link :- \n\n ${link} \n\nif you have not requested this email then, please ignore it`;
  
